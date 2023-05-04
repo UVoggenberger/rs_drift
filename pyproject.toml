@@ -1,0 +1,21 @@
+[build-system]
+requires = ["hatchling", "numpy", "pyproj"]
+build-backend = "hatchling.build"
+
+[project]
+name = "rs_drift"
+version = "0.0.1"
+authors = [
+  { name="Ulrich Voggenberger", email="ulrich.voggenberger@unvie.ac.at" },
+]
+description = "tool to reconstruct radiosonde trajectories"
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://gitlab.phaidra.org/imgw/rs_drift"
