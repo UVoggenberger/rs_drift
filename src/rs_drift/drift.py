@@ -1,8 +1,21 @@
 import numpy
 import numpy as np
+import pandas as pd
+import pkg_resources
 
 from pyproj import Geod
 g = Geod(ellps="WGS84")
+
+def load_test_data():
+    """Return a dataframe with a test ascent.
+
+    Contains all the necessary data.
+
+    """
+    # This is a stream-like object. If you want the actual info, call
+    # stream.read()
+    stream = pkg_resources.resource_stream(__name__, 'data/test_data.csv')
+    return pd.read_csv(stream, encoding='latin-1')
 
 def calc_height(t, p):
     '''
@@ -183,7 +196,6 @@ def trajectory(lat, lon, u, v, pressure, temperature, w_rs = 5.0, wind = 'mean',
     
     returns: 
         latitude displacement [output - array], longitude displacement [output - array],
-        u wind shear [m/s - array], v wind shear [m/s - array],
         seconds since launch [s - array]
     '''
     
