@@ -1,10 +1,10 @@
 [build-system]
-requires = ["hatchling", "numpy", "pyproj", "pandas"]
+requires = ["hatchling", "numpy", "pyproj", "pandas", "numba"]
 build-backend = "hatchling.build"
 
 [project]
 name = "rs_drift"
-version = "1.2.1"
+version = "1.2.2"
 authors = [
   { name="Ulrich Voggenberger", email="ulrich.voggenberger@unvie.ac.at" },
 ]
